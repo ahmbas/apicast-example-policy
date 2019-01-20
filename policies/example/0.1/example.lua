@@ -17,6 +17,7 @@ end
 
 function _M:rewrite()
   -- change the request before it reaches upstream
+  ngx.req.set_header('Test-Auth', '123')
 end
 
 function _M:access()
